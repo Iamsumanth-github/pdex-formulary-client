@@ -1,5 +1,9 @@
 require_relative 'boot'
-require 'rails/all'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'active_model/railtie'
+require 'sprockets/railtie'
+require 'rails/test_unit/railtie'
 require 'openssl'
 
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if !OpenSSL::SSL::VERIFY_PEER
